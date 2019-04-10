@@ -8041,7 +8041,7 @@ static void ImGui::NavProcessItem(ImGuiWindow* window, const ImRect& nav_bb, con
         if (new_best)
         {
             result->ID = id;
-            result->SelectScopeId = g.MultiSelectScopeId;
+            result->SelectScopeId = g.NextItemData.MultiSelectScopeId;
             result->Window = window;
             result->RectRel = nav_bb_rel;
         }
@@ -8053,7 +8053,7 @@ static void ImGui::NavProcessItem(ImGuiWindow* window, const ImRect& nav_bb, con
                 {
                     result = &g.NavMoveResultLocalVisibleSet;
                     result->ID = id;
-                    result->SelectScopeId = g.MultiSelectScopeId;
+                    result->SelectScopeId = g.NextItemData.MultiSelectScopeId;
                     result->Window = window;
                     result->RectRel = nav_bb_rel;
                 }
